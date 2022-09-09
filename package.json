@@ -1,0 +1,25 @@
+{
+  "name": "worldcupfixture",
+  "version": "1.0.0",
+  "description": "World Cup fixture maker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiasg11/WorldCupFixture.git"
+  },
+  "author": "Matias Guarnera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiasg11/WorldCupFixture/issues"
+  },
+  "homepage": "https://github.com/matiasg11/WorldCupFixture#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
+  }
+}
