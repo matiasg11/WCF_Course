@@ -7,6 +7,5 @@
 * Export the hypothetical fixture and sum the total points (matches with correct guesses of winner/ties)
 * Have an information page for each team (not really important)
 
-## Assumptions
-* To simplify the construction, let's assume the playoffs are finished and we know which team is going to each group. 
+
 
