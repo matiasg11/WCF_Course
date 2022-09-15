@@ -4,7 +4,6 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const Joi = require('joi')
-const { response } = require('express')
 const port = process.env.PORT || 8000
 app.use(express.json())
 app.use(cors())
