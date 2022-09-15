@@ -76,7 +76,7 @@ function validateGenre(genre){
     let answer =  schema.validate(genre)
     console.log(answer)
     return answer
-    
+
     
 }
 
