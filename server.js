@@ -2,11 +2,25 @@
 
 const express = require('express')
 const app = express()
+const helmet = require("helmet")
+const morgan = require('morgan')
 const cors = require('cors')
 const Joi = require('joi')
+const { Console } = require('console')
 const port = process.env.PORT || 8000
+
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`)//If it is not set it will be undefined
+console.log(`app: ${app.get('env')}`)
+
 app.use(express.json())
 app.use(cors())
+app.use(helmet())
+
+if (app.get('env') === 'development'){
+    app.use(morgan('tiny'));
+    console.log("Morgan Enabled.");
+}
+
 
 let movieGenres = [
     {id:1, name:"Terror"},
