@@ -8,6 +8,7 @@ const cors = require('cors')
 const Joi = require('joi')
 const { Console } = require('console')
 const port = process.env.PORT || 8000
+const config = require('config')
 
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`)//If it is not set it will be undefined
 console.log(`app: ${app.get('env')}`)
@@ -15,6 +16,12 @@ console.log(`app: ${app.get('env')}`)
 app.use(express.json())
 app.use(cors())
 app.use(helmet())
+
+//Configuration
+console.log('App Name: '+  config.get('name'))
+console.log('Mail Server: '+  config.get('mail.host'))
+console.log('Pas: '+  config.get('mail.password'))
+
 
 if (app.get('env') === 'development'){
     app.use(morgan('tiny'));
