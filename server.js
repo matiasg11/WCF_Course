@@ -9,6 +9,8 @@ const Joi = require('joi')
 const { Console } = require('console')
 const port = process.env.PORT || 8000
 const config = require('config')
+const startupDebugger = require('debug')('app:startup')
+const dbDebugger = require('debug')('app:db')
 
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`)//If it is not set it will be undefined
 console.log(`app: ${app.get('env')}`)
@@ -27,6 +29,9 @@ if (app.get('env') === 'development'){
     app.use(morgan('tiny'));
     console.log("Morgan Enabled.");
 }
+
+//Db Work...
+dbDebugger('connected to database')
 
 
 let movieGenres = [
